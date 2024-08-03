@@ -94,7 +94,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form id="courseForm">
+        <form action="registroCurso.php" method="POST" id="cursoForm">
             <div class="mb-3">
               <label for="courseCode" class="form-label">Código del Curso</label>
               <input type="text" class="form-control" id="courseCode" name="codigo" required>
