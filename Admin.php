@@ -25,13 +25,6 @@
         <button data-bs-toggle="modal" data-bs-target="#registroUser" class="btn btn-primary">Crear</button>
       </div>
     </div>
-    <div class="card-group">
-  <div class="card">
-    <img src="img/3289566_assistant_educator_professor_showing_teacher_icon.png" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Agregar Profesores</h5>
-      <button id="btnIr" >Crear</button>
-
     <div class="card">
       <img style="width: 70px; height: 70px; "
         src="img/6599571_achievement_complete_completion_course_e-learning_icon.png" class="card-img-top" alt="...">
@@ -60,24 +53,24 @@
         <div class="modal-body">
           <form action="inserts.php" method="POST" id="userForm">
             <div class="mb-3">
-              <label for="cedula" class="form-label">Cédula</label>
-              <input type="text" class="form-control" id="cedula" name="cedula" required>
+              <label for="userCedula" class="form-label">Cédula</label>
+              <input type="text" class="form-control" id="userCedula" name="cedula" required>
             </div>
             <div class="mb-3">
-              <label for="nombre" class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="nombre" name="nombre" required>
+              <label for="userName" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="userName" name="nombre" required>
             </div>
             <div class="mb-3">
-              <label for="telefono" class="form-label">Teléfono</label>
-              <input type="text" class="form-control" id="telefono" name="telefono" required>
+              <label for="userTelefono" class="form-label">Teléfono</label>
+              <input type="text" class="form-control" id="userTelefono" name="telefono" required>
             </div>
             <div class="mb-3">
-              <label for="contrasena" class="form-label">Contraseña</label>
-              <input type="password" class="form-control" id="contrasena" name="contrasena" required>
+              <label for="userPassword" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="userPassword" name="contrasena" required>
             </div>
             <div class="mb-3">
-              <label for="idRole" class="form-label">Rol</label>
-              <select class="form-select" id="idRole" name="idRole" required>
+              <label for="userRole" class="form-label">Rol</label>
+              <select class="form-select" id="userRole" name="idRole" required>
                 <option value="" disabled selected>Seleccionar rol</option>
                 <option value="2">Maestro</option>
                 <option value="3">Estudiante</option>
