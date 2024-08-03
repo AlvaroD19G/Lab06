@@ -17,7 +17,7 @@
     <img src="img/3289566_assistant_educator_professor_showing_teacher_icon.png" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">Agregar Profesores</h5>
-      <button id="btnIr">Crear</button>
+      <button id="btnIr" >Crear</button>
     </div>
   </div>
   <div class="card">

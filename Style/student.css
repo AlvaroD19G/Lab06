@@ -1,0 +1,15 @@
+.navbar {
+    background: linear-gradient(90deg, #add8e6, #599cb6, #11395a);
+    font-size: 40px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 100%;
+    height: 80px;
+    color: white;
+}
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
