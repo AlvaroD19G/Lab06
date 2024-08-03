@@ -18,9 +18,7 @@
             <input id="cedula" class="input" name="cedula" placeholder="Usuario" type="text">
             <input id="password" class="input" name="password" placeholder="Password" type="password">
             <button class="button-confirm">iniciar</button>
-            
         </form>
-
     </div>
 </body>
 </html>
