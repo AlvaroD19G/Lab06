@@ -30,7 +30,7 @@
         src="img/6599571_achievement_complete_completion_course_e-learning_icon.png" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Agregar Cursos</h5>
-        <button data-bs-toggle="modal" data-bs-target="#registroUser" class="btn btn-primary">Crear</button>
+        <button data-bs-toggle="modal" data-bs-target="#addCourseModal" class="btn btn-primary">Crear</button>
       </div>
     </div>
     <div class="card">
@@ -43,29 +43,79 @@
   </div>
 
   <!-- Modal -->
-  <div id="registroUser" class="modal" tabindex="-1">
+  <div id="registroUser" class="modal fade" tabindex="-1" aria-labelledby="registroUserLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Modal title</h5>
+          <h5 class="modal-title" id="registroUserLabel">Registrar Usuario</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="submit" id="saveUser" class="btn btn-primary" title="Guardar"><i class="bi bi-save"></i>
-            Guardar</button>
+          <form id="userForm">
+            <div class="mb-3">
+              <label for="userCedula" class="form-label">Cédula</label>
+              <input type="text" class="form-control" id="userCedula" name="cedula" required>
+            </div>
+            <div class="mb-3">
+              <label for="userName" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="userName" name="nombre" required>
+            </div>
+            <div class="mb-3">
+              <label for="userTelefono" class="form-label">Teléfono</label>
+              <input type="text" class="form-control" id="userTelefono" name="telefono" required>
+            </div>
+            <div class="mb-3">
+              <label for="userPassword" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="userPassword" name="contrasena" required>
+            </div>
+            <div class="mb-3">
+              <label for="userRole" class="form-label">Rol</label>
+              <select class="form-select" id="userRole" name="idRole" required>
+                <option value="" disabled selected>Seleccionar rol</option>
+                <option value="2">Maestro</option>
+                <option value="3">Estudiante</option>
+              </select>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
   </div>
-
+  <!-- Modal para Agregar Cursos -->
+  <div id="addCourseModal" class="modal fade" tabindex="-1" aria-labelledby="addCourseLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addCourseLabel">Agregar Curso</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="courseForm">
+            <div class="mb-3">
+              <label for="courseCode" class="form-label">Código del Curso</label>
+              <input type="text" class="form-control" id="courseCode" name="codigo" required>
+            </div>
+            <div class="mb-3">
+              <label for="courseName" class="form-label">Nombre del Curso</label>
+              <input type="text" class="form-control" id="courseName" name="nombre" required>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+
 </body>
 
 </html>
