@@ -76,6 +76,14 @@
                 <option value="3">Estudiante</option>
               </select>
             </div>
+            <div class="mb-3">
+              <label for="idAsignar" class="form-label">Asignar Cursos</label>
+              <select class="form-select" id="idAsignar" name="idAsignar" required>
+                <option value="" disabled selected>Seleccionar un curso</option>
+                <option value=></option>
+                <option value=></option>
+              </select>
+            </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
               <button type="submit" class="btn btn-primary">Guardar</button>
