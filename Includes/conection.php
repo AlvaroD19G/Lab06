@@ -10,5 +10,5 @@ if ($conex) {
 }else{
     echo 'conexion fallida';
 }
-//Hola
+
 ?>

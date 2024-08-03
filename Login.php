@@ -12,12 +12,12 @@
 <body>
     <div class="Container">
         <form class="form">
-            <div class="title">LOGIN<br></div>
-            <input class="input" name="email" placeholder="Email" type="email">
+            <div class="title">SCHOOL SYSTEM<br></div>
+            <img style="width: 50px; height:50px;" src="img/5258525_blackboard_classroom_study_teacher_writing_icon.png"
+                alt="">
+            <input class="input" name="user" placeholder="Usuario" type="text">
             <input class="input" name="password" placeholder="Password" type="password">
-            <img style="width: 100px; height:100px;"
-                src="img/5258525_blackboard_classroom_study_teacher_writing_icon.png" alt="">
-            <button class="button-confirm">Let`s go →</button>
+            <button class="button-confirm">iniciar</button>
         </form>
     </div>
 </body>
