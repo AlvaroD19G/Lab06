@@ -14,33 +14,24 @@
     </div>
     <div class="card-group">
   <div class="card">
-    <img src="..." class="card-img-top" alt="...">
+    <img src="img/3289566_assistant_educator_professor_showing_teacher_icon.png" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-body-secondary">Last updated 3 mins ago</small>
+      <h5 class="card-title">Agregar Profesores</h5>
+      <button id="btnIr">Crear</button>
     </div>
   </div>
   <div class="card">
-    <img src="..." class="card-img-top" alt="...">
+    <img src="img/6599571_achievement_complete_completion_course_e-learning_icon.png" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-body-secondary">Last updated 3 mins ago</small>
+      <h5 class="card-title">Agregar Cursos</h5>
+      <button id="btnIr">Crear</button>
     </div>
   </div>
   <div class="card">
-    <img src="..." class="card-img-top" alt="...">
+    <img src=" img/9025980_student_icon.png" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-body-secondary">Last updated 3 mins ago</small>
+      <h5 class="card-title">Agregar Estudiantes</h5>
+      <button id="btnIr">Crear</button>
     </div>
   </div>
 </div> 
