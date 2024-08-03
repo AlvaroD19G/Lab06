@@ -25,13 +25,6 @@
         <button data-bs-toggle="modal" data-bs-target="#registroUser" class="btn btn-primary">Crear</button>
       </div>
     </div>
-    <div class="card-group">
-  <div class="card">
-    <img src="img/3289566_assistant_educator_professor_showing_teacher_icon.png" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Agregar Profesores</h5>
-      <button id="btnIr" >Crear</button>
-
     <div class="card">
       <img style="width: 70px; height: 70px; "
         src="img/6599571_achievement_complete_completion_course_e-learning_icon.png" class="card-img-top" alt="...">
@@ -58,7 +51,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form id="userForm">
+          <form action="inserts.php" method="POST" id="userForm">
             <div class="mb-3">
               <label for="userCedula" class="form-label">Cédula</label>
               <input type="text" class="form-control" id="userCedula" name="cedula" required>
