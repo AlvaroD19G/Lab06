@@ -25,6 +25,13 @@
         <button data-bs-toggle="modal" data-bs-target="#registroUser" class="btn btn-primary">Crear</button>
       </div>
     </div>
+    <div class="card-group">
+  <div class="card">
+    <img src="img/3289566_assistant_educator_professor_showing_teacher_icon.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Agregar Profesores</h5>
+      <button id="btnIr" >Crear</button>
+
     <div class="card">
       <img style="width: 70px; height: 70px; "
         src="img/6599571_achievement_complete_completion_course_e-learning_icon.png" class="card-img-top" alt="...">
