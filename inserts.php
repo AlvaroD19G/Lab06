@@ -1,7 +1,6 @@
 <?php
 require_once 'includes/conection.php'; // Verifica la ruta
 session_start();
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $cedula = isset($_POST['cedula']) ? $_POST['cedula'] : false;
     $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : false;
