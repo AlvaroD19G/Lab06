@@ -1,6 +1,6 @@
 <?php
 require_once 'includes/conection.php';
-require_once 'asignar.php'; 
+require_once 'asignar.php';
 
 $personas = getPersonas($conex);
 $cursos = getCursos($conex);
@@ -17,26 +17,23 @@ $cursos = getCursos($conex);
   <title>Pagina Principal</title>
   <link rel="stylesheet" href="style/reset.css">
   <link rel="stylesheet" href="style/admin.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
 <body>
   <div class="navbar">
     <h4>Bienvenido al Sistema</h4>
+    <a href="Login.php"><img style="width: 40px; height: 40px; margin-right: 20px;"
+        src="img/1564535_customer_user_userphoto_account_person_icon.png" class="card-img-top" alt="..."></a>
   </div>
   <div class="card-group">
     <div class="card">
-      <img style="width: 70px; height: 70px; " src="img/8541740_chalkboard_teacher_icon.png" class="card-img-top" alt="...">
+      <img style="width: 70px; height: 70px; " src="img/8541740_chalkboard_teacher_icon.png" class="card-img-top"
+        alt="...">
       <div class="card-body">
         <h5 class="card-title">Agregar Profesores</h5>
         <button data-bs-toggle="modal" data-bs-target="#registroUser" class="btn btn-primary">Crear</button>
-      </div>
-    </div>
-    <div class="card">
-      <img style="width: 70px; height: 70px; " src="img/6599571_achievement_complete_completion_course_e-learning_icon.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Agregar Cursos</h5>
-        <button data-bs-toggle="modal" data-bs-target="#addCourseModal" class="btn btn-primary">Crear</button>
       </div>
     </div>
     <div class="card">
@@ -44,6 +41,14 @@ $cursos = getCursos($conex);
       <div class="card-body">
         <h5 class="card-title">Agregar Estudiantes</h5>
         <button data-bs-toggle="modal" data-bs-target="#registroUser" class="btn btn-primary">Crear</button>
+      </div>
+    </div>
+    <div class="card">
+      <img style="width: 70px; height: 70px; "
+        src="img/6599571_achievement_complete_completion_course_e-learning_icon.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Agregar Cursos</h5>
+        <button data-bs-toggle="modal" data-bs-target="#addCourseModal" class="btn btn-primary">Crear</button>
       </div>
     </div>
     <div class="card">
@@ -139,7 +144,7 @@ $cursos = getCursos($conex);
               <label for="persona" class="form-label">Persona</label>
               <select class="form-select" id="persona" name="persona" required>
                 <option value="" disabled selected>Seleccionar persona</option>
-                <?php foreach ($personas as $persona) : ?>
+                <?php foreach ($personas as $persona): ?>
                   <option value="<?= htmlspecialchars($persona['cedula']) ?>">
                     <?= htmlspecialchars($persona['cedula']) ?>
                   </option>
@@ -150,7 +155,7 @@ $cursos = getCursos($conex);
               <label for="curso" class="form-label">Curso</label>
               <select class="form-select" id="curso" name="curso" required>
                 <option value="" disabled selected>Seleccionar curso</option>
-                <?php foreach ($cursos as $curso) : ?>
+                <?php foreach ($cursos as $curso): ?>
                   <option value="<?= htmlspecialchars($curso['codigo']) ?>">
                     <?= htmlspecialchars($curso['nombre']) ?>
                   </option>
@@ -165,8 +170,9 @@ $cursos = getCursos($conex);
       </div>
     </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
