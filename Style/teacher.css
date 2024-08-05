@@ -1,10 +1,3 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #666; 
-}
-
 .navbar {
     background: linear-gradient(90deg, #add8e6, #599cb6, #11395a);
     font-size: 40px;
@@ -13,21 +6,18 @@ body {
     width: 100%;
     height: 80px;
     color: white;
-    position: relative; 
+    position: relative;
 }
 
-.navbar .icono{
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: rgb(0, 0, 0);
-    font-size: 24px;
-    text-decoration: none;
+.navbar h4 {
+    display: block;
+    margin: 0 auto;
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif !important;
 }
 
 .content {
-    background-color: #ffffff; 
+    background-color: #ffffff;
     padding: 20px;
     margin-top: 20px;
 }
@@ -42,10 +32,11 @@ table {
     width: 95%;
     margin: 20px auto;
     border-collapse: collapse;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-th, td {
+th,
+td {
     padding: 12px 15px;
     border: 1px solid #ddd;
     text-align: center;
@@ -60,7 +51,7 @@ thead th {
 }
 
 tbody tr {
-    background-color: #f2f2f2; 
+    background-color: #f2f2f2;
 }
 
 tbody th {
@@ -68,6 +59,7 @@ tbody th {
     color: #333;
 }
 
-th.text-center, td.text-center {
+th.text-center,
+td.text-center {
     text-align: center;
 }

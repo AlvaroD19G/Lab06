@@ -2,7 +2,6 @@
 include_once 'includes/conection.php';
 session_start();
 
-// Asegúrate de que el usuario esté logueado
 if (!isset($_SESSION['cedula']) || !isset($_SESSION['rol'])) {
     header('Location: login.php');
     exit();
@@ -22,11 +21,13 @@ $rol = $_SESSION['rol'];
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/teacher.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
 <body>
     <div class="navbar">
-        <h4>Bienvenido al Sistema Profesor</h4>
+        <h4>Bienvenido al Sistema Maestro</h4>
         <a href="Login.php"><img style="width: 40px; height: 40px; margin-right: 20px;"
                 src="img/1564535_customer_user_userphoto_account_person_icon.png" class="card-img-top" alt="..."></a>
     </div>
