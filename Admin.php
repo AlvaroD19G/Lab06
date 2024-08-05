@@ -29,17 +29,10 @@ $cursos = getCursos($conex);
   </div>
   <div class="card-group">
     <div class="card">
-      <img style="width: 70px; height: 70px; " src="img/8541740_chalkboard_teacher_icon.png" class="card-img-top"
+      <img style="width: 70px; height: 70px; " src="img/172626_user_male_icon.png" class="card-img-top"
         alt="...">
       <div class="card-body">
-        <h5 class="card-title">Agregar Profesores</h5>
-        <button data-bs-toggle="modal" data-bs-target="#registroUser" class="btn btn-primary">Crear</button>
-      </div>
-    </div>
-    <div class="card">
-      <img style="width: 70px; height: 70px;" src="img/9023992_student_fill_icon.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Agregar Estudiantes</h5>
+        <h5 class="card-title">Agregar Usuarios</h5>
         <button data-bs-toggle="modal" data-bs-target="#registroUser" class="btn btn-primary">Crear</button>
       </div>
     </div>
