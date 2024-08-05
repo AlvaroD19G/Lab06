@@ -27,6 +27,8 @@ $rol = $_SESSION['rol'];
 <body>
     <div class="navbar">
         <h4>Bienvenido al Sistema Profesor</h4>
+        <a href="Login.php"><img style="width: 40px; height: 40px; margin-right: 20px;"
+                src="img/1564535_customer_user_userphoto_account_person_icon.png" class="card-img-top" alt="..."></a>
     </div>
     <div class="table-responsive-xxl mt-3">
         <?php if ($rol === 'maestro'): ?>
