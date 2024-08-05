@@ -1,3 +1,17 @@
+<?php
+include_once 'includes/conection.php';
+session_start();
+
+// Asegúrate de que el usuario esté logueado
+if (!isset($_SESSION['cedula']) || !isset($_SESSION['rol'])) {
+    header('Location: login.php');
+    exit();
+}
+
+$cedula = $_SESSION['cedula'];
+$rol = $_SESSION['rol'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,21 +29,56 @@
         <h4>Bienvenido al Sistema Profesor</h4>
     </div>
     <div class="table-responsive-xxl mt-3">
-        <table id="tableRequest" class="table table-light table-striped table-hover table-bordered"
-            id="TableAppointment" style="margin-left: 20px; cursor: pointer; margin-block: 10px;">
-            <thead>
-                <tr>
-                    <th class="text-center" id="color-th">Curso</th>
-                    <th class="text-center" id="color-th">Estudiante</th>
-                </tr>
-            </thead>
-            <tbody id="tableRequestBody" class="text-center">
-                <tr>
-                    <td>-----</td>
-                    <td>-----</td>
-                </tr>
-            </tbody>
-        </table>
+        <?php if ($rol === 'maestro'): ?>
+            <table id="tableRequest" class="table table-light table-striped table-hover table-bordered"
+                style="margin-left: 20px; cursor: pointer; margin-block: 10px;">
+                <thead>
+                    <tr>
+                        <th class="text-center" id="color-th">Curso</th>
+                        <th class="text-center" id="color-th">Estudiante</th>
+                    </tr>
+                </thead>
+                <tbody id="tableRequestBody" class="text-center">
+                    <?php
+                    $query = "SELECT c.Codigo, c.Nombre
+                      FROM asignacion a
+                      JOIN cursos c ON a.Codigo_curso = c.Codigo
+                      WHERE a.Cedula_persona = ?";
+
+                    $stmt = $conex->prepare($query);
+                    $stmt->bind_param('s', $cedula);
+                    $stmt->execute();
+                    $result = $stmt->get_result();
+                    $cursos = $result->fetch_all(MYSQLI_ASSOC);
+
+                    foreach ($cursos as $curso) {
+                        // Obtener estudiantes que tienen el mismo curso
+                        $queryEstudiantes = "SELECT p.Nombre
+                                     FROM asignacion a
+                                     JOIN personas p ON a.Cedula_persona = p.Cedula
+                                     JOIN roles r ON p.IdRole = r.Id
+                                     WHERE a.Codigo_curso = ? AND r.Nombre = 'estudiante'";
+
+                        $stmtEstudiantes = $conex->prepare($queryEstudiantes);
+                        $stmtEstudiantes->bind_param('s', $curso['Codigo']);
+                        $stmtEstudiantes->execute();
+                        $resultEstudiantes = $stmtEstudiantes->get_result();
+                        $estudiantes = $resultEstudiantes->fetch_all(MYSQLI_ASSOC);
+
+                        foreach ($estudiantes as $estudiante) {
+                            echo "<tr>
+                            <td>" . htmlspecialchars($curso['Nombre']) . "</td>
+                            <td>" . htmlspecialchars($estudiante['Nombre']) . "</td>
+                          </tr>";
+                        }
+                    }
+                    ?>
+                </tbody>
+            </table>
+        <?php else: ?>
+            <p>Acceso denegado. Solo los maestros pueden ver esta página.</p>
+        <?php endif; ?>
+
     </div>
 </body>
 
