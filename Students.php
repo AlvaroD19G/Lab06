@@ -10,7 +10,6 @@
 </head>
 <body>
 <div class="navbar">
-    <a href="Admin.php" class="icono"><i class="fas fa-arrow-left"></i></a>
     <h4>Bienvenido al Sistema Estudiante</h4>
 </div>
     <div class="table-responsive-xxl mt-3">
